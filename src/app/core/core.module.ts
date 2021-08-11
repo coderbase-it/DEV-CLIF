@@ -1,25 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { HomeModule } from '../home/home.module';
-import { IconsModule } from '../icons/icons.module';
-import { TemplatesModule } from '../templates/templates.module';
-import { UiModule } from '../ui/ui.module';
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
-import { NavComponent } from './components/nav/nav.component';
+import { PageAddContactComponent } from './pages/page-add-contact/page-add-contact.component';
+import { PageEditContactComponent } from './pages/page-edit-contact/page-edit-contact.component';
+import { PageHomeComponent } from './pages/page-home/page-home.component';
+import { PageListContactsComponent } from './pages/page-list-contacts/page-list-contacts.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, NavComponent],
-  imports: [CommonModule, RouterModule],
-  exports: [
-    UiModule,
-    IconsModule,
-    TemplatesModule,
-    HeaderComponent,
-    FooterComponent,
-    NavComponent,
-    HomeModule,
+  declarations: [
+    PageListContactsComponent,
+    PageAddContactComponent,
+    PageEditContactComponent,
+    PageNotFoundComponent,
+    PageHomeComponent,
   ],
+  imports: [CommonModule, RouterModule],
 })
 export class CoreModule {}

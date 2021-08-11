@@ -1,24 +1,23 @@
 <header class="fixed-top">
-  <span (click)="toggle()">
-    <app-icon-nav *ngIf="open"></app-icon-nav>
-    <app-icon-close *ngIf="!open"></app-icon-close>
-  </span>
-  <app-header></app-header>
+  <fa-icon class="logo" [icon]="logo"></fa-icon>
+  <ul ngbNav #nav="ngbNav" class="nav-pills">
+    <li ngbNavItem="home">
+      <a ngbNavLink [routerLink]="['./home']">Home</a>
+    </li>
+    <li ngbNavItem="contacts">
+      <a ngbNavLink [routerLink]="['./contacts']">Contacts</a>
+    </li>
+  </ul>
+
 </header>
-<main [ngClass]="{'close-aside': open}">
-  <div class="shadow position-fixed">
-  </div>
-  <aside>
-    <div class="scroller">
-      <app-nav></app-nav>
-    </div>
-  </aside>
+<main>
   <div class="page">
     <div class="contents">
       <router-outlet></router-outlet>
     </div>
-    <footer>
-      <app-footer></app-footer>
+    <footer class="bg-light text-muted text-center p-4">
+      <p>Contact us : +33 6 56 85 84 33 | contact@coderbase.io</p>
+      <p>2018 © Coderbase IT Limited</p>
     </footer>
   </div>
 </main>

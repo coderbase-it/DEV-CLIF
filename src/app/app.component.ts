@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'contactmanager';
-  public open: boolean = true;
-
-  /**
-   * toggle
-   */
-  public toggle() {
-    this.open = !this.open;
-    console.log(this.open);
-  }
+  logo = faHome;
 }
