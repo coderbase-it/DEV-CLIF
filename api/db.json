@@ -1,19 +1,18 @@
 {
-  "contacts":[
+  "contacts": [
     {
       "name": "Dylan",
-    "email": "dylan@aol.com",
-    "phone": "0601020304",
-    "status": "ACTIVE",
-    "id": 1
-  },
-  {
-    "name": "Christophe",
-    "email": "christophe@aol.com",
-    "phone": "0604030201",
-    "status": "INACTIVE",
-    "id": 2
-  }
+      "email": "dylan@aol.com",
+      "status": "ACTIVE",
+      "phone": "0601020304",
+      "id": 1
+    },
+    {
+      "name": "Christophe",
+      "email": "christophe@aol.com",
+      "phone": "0604030201",
+      "status": "INACTIVE",
+      "id": 2
+    }
   ]
-
 }

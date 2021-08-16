@@ -13,6 +13,20 @@ header {
   font-size: 27px;
 }
 
+.navbtn:hover {
+  color: #007bff;
+}
+
+.navbtn.active {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.navbtn:focus {
+  box-shadow: none;
+}
+
 main {
   background: #ebedf2;
   min-height: calc(100vh - 65px);

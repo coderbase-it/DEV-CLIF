@@ -4,8 +4,8 @@ import { ContactI } from '../interfaces/contact-i';
 export class Contact implements ContactI {
   name = 'name';
   email = 'exemple@exemple.com';
-  phone!: number;
-  state = StateContact.ACTIVE;
+  phone = '0601020304';
+  status = StateContact.ACTIVE;
   id!: number;
   constructor(obj?: Partial<Contact>) {
     if (obj) {

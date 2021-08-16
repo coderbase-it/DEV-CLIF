@@ -3,7 +3,7 @@ import { StateContact } from '../enums/state-contact';
 export interface ContactI {
   name: string;
   email: string;
-  phone: number;
-  state: StateContact;
+  phone: string;
+  status: StateContact;
   id: number;
 }

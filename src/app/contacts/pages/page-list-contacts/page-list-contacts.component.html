@@ -1,0 +1,38 @@
+<div>
+  <app-btn label="Add with a page" route="add"></app-btn>
+  <!-- <app-btn label="Add a contact" route="/contacts/" (click)="open(content)"></app-btn> btn modal-->
+  <div *ngFor="let contact of contacts">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">
+          <fa-icon [appState]="contact.status" [icon]="userIcon"></fa-icon>
+          Contact {{contact.id}}
+        </h5>
+        <p class="card-text">
+          - Name : {{contact.name}}
+        </p>
+        <p class="card-text">
+          - Status :
+          <select (change)="changeStatus(contact, $event)">
+            <option *ngFor="let status of statuses" [value]="status" [selected]="status === contact.status">{{ status }}
+            </option>
+          </select>
+        </p>
+        <a [routerLink]="['/contacts', contact.id]" class="btn btn-primary">more...</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Add a contact</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <app-page-add-contact></app-page-add-contact>
+    <button (submit)="modal.close('Save click')"></button>
+  </div>
+</ng-template>
