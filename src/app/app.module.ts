@@ -7,6 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactsModule } from './contacts/contacts.module';
 import { CoreModule } from './core/core.module';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+
+const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +22,7 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
+    SocketIoModule.forRoot(config)
   ],
   providers: [],
   bootstrap: [AppComponent],

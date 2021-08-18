@@ -1,12 +1,12 @@
 <header class="fixed-top">
   <fa-icon class="logo" [icon]="logo"></fa-icon>
-
   <a class="btn navbtn" routerLinkActive="active" [routerLink]="['/home']">Home</a>
-
-  <a class="btn navbtn" routerLinkActive="active" [routerLink]="['/contacts']">Contacts</a>
-
-
-
+  <a class="btn navbtn" routerLinkActive="active" [routerLink]="['/contacts']">
+    Contacts
+    <span *ngIf="notif">
+      {{notif}}
+    </span>
+  </a>
 </header>
 <main>
   <div class="page">

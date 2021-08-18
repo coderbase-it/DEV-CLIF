@@ -32,7 +32,7 @@ export class ContactService {
   // edit item in collection
   public update(contact: Contact): Observable<Contact> {
     return this.http.put<Contact>(
-      `${this.urlApi}/contacts/${contact.id}`,
+      `${this.urlApi}/contacts/${contact._id}`,
       contact
     );
   }

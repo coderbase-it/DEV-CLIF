@@ -1,12 +1,11 @@
 <div>
   <app-btn label="Add with a page" route="add"></app-btn>
-  <!-- <app-btn label="Add a contact" route="/contacts/" (click)="open(content)"></app-btn> btn modal-->
   <div *ngFor="let contact of contacts">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">
           <fa-icon [appState]="contact.status" [icon]="userIcon"></fa-icon>
-          Contact {{contact.id}}
+          Contact {{contact._id}}
         </h5>
         <p class="card-text">
           - Name : {{contact.name}}
@@ -18,7 +17,7 @@
             </option>
           </select>
         </p>
-        <a [routerLink]="['/contacts', contact.id]" class="btn btn-primary">more...</a>
+        <a [routerLink]="['/contacts', contact._id]" class="btn btn-primary">more...</a>
       </div>
     </div>
   </div>

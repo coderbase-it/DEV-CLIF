@@ -1,4 +1,7 @@
 <div class="card">
+  <h3 *ngIf="formMsg">
+    {{formMsg}}
+  </h3>
   <form class="card-body myform" [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Name</label>
@@ -18,6 +21,6 @@
         <option *ngFor="let status of statuses" [ngValue]="status">{{ status }}</option>
       </select>
     </div>
-    <button type="submit" class="btn btn-primary" >Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>

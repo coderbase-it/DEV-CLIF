@@ -5,5 +5,6 @@ export interface ContactI {
   email: string;
   phone: string;
   status: StateContact;
-  id: number;
+  _id: string;
+  updatedAt?: string;
 }

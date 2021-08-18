@@ -2,7 +2,7 @@
 
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Contact {{contact.id}}</h5>
+      <h5 class="card-title">Contact {{contact._id}}</h5>
       <p class="card-text">
         - Name : {{contact.name}}
       </p>
@@ -10,7 +10,7 @@
         - Email : {{contact.email}}
       </p>
       <p class="card-text">
-        - Phone : {{contact.phone}}
+        - Phone : <a href="tel:">{{contact.phone}}</a>
       </p>
       <a [routerLink]="['/contacts']" class="btn btn-primary">back</a>
     </div>

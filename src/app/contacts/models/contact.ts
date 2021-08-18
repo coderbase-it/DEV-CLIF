@@ -6,7 +6,7 @@ export class Contact implements ContactI {
   email = 'exemple@exemple.com';
   phone = '0601020304';
   status = StateContact.ACTIVE;
-  id!: number;
+  _id!: string;
   constructor(obj?: Partial<Contact>) {
     if (obj) {
       Object.assign(this, obj);
